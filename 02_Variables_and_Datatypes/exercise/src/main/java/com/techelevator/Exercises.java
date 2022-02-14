@@ -26,47 +26,72 @@ public class Exercises {
         3. 3 raccoons are playing in the woods. 2 go home to eat dinner. How
         many raccoons are left in the woods?
         */
+		int raccoonsInWoods = 3;
+		int raccoonsLeaving = 2;
+		int raccoonsLeft = raccoonsInWoods - raccoonsLeaving;
 
 
         /* Exercise 4
         4. There are 5 flowers and 3 bees. How many less bees than flowers?
         */
+		int numberOfFlowers = 5;
+		int numberofBees = 3;
+		int difference = numberOfFlowers - numberofBees;
 
 
         /* Exercise 5
         5. 1 lonely pigeon was eating breadcrumbs. Another pigeon came to eat
         breadcrumbs, too. How many pigeons are eating breadcrumbs now?
         */
+		int pidgeonEating = 1;
+		int arrvingPidgeons = 1;
+		int numberOfPidgeons = pidgeonEating + arrvingPidgeons;
 
 
         /* Exercise 6
         6. 3 owls were sitting on the fence. 2 more owls joined them. How many
         owls are on the fence now?
         */
+		int owlsOnFence = 3;
+		int arrivingOwls = 2;
+		int totalOwls = owlsOnFence + arrivingOwls;
 
 
         /* Exercise 7
         7. 2 beavers were working on their home. 1 went for a swim. How many
         beavers are still working on their home?
         */
+		int workingBeavers = 2;
+		int swimmingBeavers = 1;
+		int remainingBeavers= workingBeavers - swimmingBeavers;
 
 
         /* Exercise 8
         8. 2 toucans are sitting on a tree limb. 1 more toucan joins them. How
         many toucans in all?
         */
+		int sittingToucans = 2;
+		int joiningToucans = 1;
+		int totalToucans = sittingToucans + joiningToucans;
 
 
         /* Exercise 9
         9. There are 4 squirrels in a tree with 2 nuts. How many more squirrels
         are there than nuts?
         */
+		int totalSquirrels = 4;
+		int totalNuts = 2;
+		int theDifference = totalSquirrels - totalNuts;
 
 
         /* Exercise 10
         10. Mrs. Hilt found a quarter, 1 dime, and 2 nickels. How much money did
         she find?
         */
+		double quarter = .25;
+		double dime = .1;
+		double nickel = .05;
+		double mrsHiltsTotal = quarter + dime + (2*nickel);
 
 
         /* Exercise 11
@@ -75,12 +100,19 @@ public class Exercises {
         Mrs. Flannery's class bakes 17 muffins. How many muffins does first
         grade bake in all?
         */
+		int briarsMuffins = 18;
+		int macadamsMuffins = 20;
+		int flannerysMuffins = 17;
+		int totalMuffins = macadamsMuffins + briarsMuffins + flannerysMuffins;
 
 
         /* Exercise 12
         12. Mrs. Hilt bought a yoyo for 24 cents and a whistle for 14 cents. How
         much did she spend in all for the two toys?
         */
+		double newYoyo = .24;
+		double newWhistle = .14;
+		double totalCost = newYoyo + newWhistle;
 
 
         /* Exercise 13
@@ -88,6 +120,9 @@ public class Exercises {
         and 10 mini marshmallows.How many marshmallows did she use
         altogether?
         */
+		int miniMarsh = 10;
+		int regMarsh = 8;
+		int totalMarshmallows = miniMarsh + regMarsh;
 
 
         /* Exercise 14
@@ -95,47 +130,70 @@ public class Exercises {
         Elementary School received 17 inches of snow. How much more snow
         did Mrs. Hilt's house have?
         */
+		int snowAtHilts = 29;
+		int snowAtSchool = 17;
+		int snowDiff = snowAtHilts - snowAtSchool;
 
 
         /* Exercise 15
         15. Mrs. Hilt has $10. She spends $3 on a toy truck and $2 on a pencil
         case. How much money does she have left?
         */
+		double hiltsCash = 10;
+		double truckPurchase = 3;
+		double pencilCasePurchase = 2;
+		double remainingCash = (hiltsCash - (truckPurchase + pencilCasePurchase));
 
 
         /* Exercise 16
         16. Josh had 16 marbles in his collection. He lost 7 marbles. How many
         marbles does he have now?
         */
+		int joshMarbles = 16;
+		int lostMarbles = 7;
+		int remainingMarbles = joshMarbles - lostMarbles;
 
 
         /* Exercise 17
         17. Megan has 19 seashells. How many more seashells does she need to
         find to have 25 seashells in her collection?
         */
+		int meganShells = 19;
+		int megansGoals = 25;
+		int shellRemainder = megansGoals - meganShells;
 
 
         /* Exercise 18
         18. Brad has 17 balloons. 8 balloons are red and the rest are green. How
         many green balloons does Brad have?
         */
+		int bradsBalloons = 17;
+		int redBalloons = 8;
+		int remainingBalloons = bradsBalloons - redBalloons;
 
 
         /* Exercise 19
         19. There are 38 books on the shelf. Marta put 10 more books on the shelf.
         How many books are on the shelf now?
         */
+		int booksOnShelf = 38;
+		int marthasAdditions = 10;
+		int totalBooks = booksOnShelf + marthasAdditions;
 
 
         /* Exercise 20
         20. A bee has 6 legs. How many legs do 8 bees have?
         */
+		int beeLegs = 6;
+		int eightBeeLegs = beeLegs*8;
 
 
         /* Exercise 21
         21. Mrs. Hilt bought an ice cream cone for 99 cents. How much would 2 ice
         cream cones cost?
         */
+		double coneCost = .99;
+		double doubleConeCost = coneCost*2;
 
 
         /* Exercise 22
@@ -143,18 +201,27 @@ public class Exercises {
         rocks to complete the border. She has 64 rocks. How many more rocks
         does she need to complete the border?
         */
+		int borderCost = 125;
+		int currentlyHas = 64;
+		int needs = borderCost - currentlyHas;
 
 
         /* Exercise 23
         23. Mrs. Hilt had 38 marbles. She lost 15 of them. How many marbles does
         she have left?
         */
+		int hiltsMarbles = 38;
+		int hiltsLostMarbles = 15;
+		int marblesLeft = hiltsMarbles - hiltsLostMarbles;
 
 
         /* Exercise 24
         24. Mrs. Hilt and her sister drove to a concert 78 miles away. They drove 32
         miles and then stopped for gas. How many miles did they have left to drive?
         */
+		int totalMileage = 78;
+		int traveledDistance = 32;
+		int remainingMileage = totalMileage - traveledDistance;
 
 
         /* Exercise 25
@@ -162,18 +229,27 @@ public class Exercises {
         morning and 45 minutes shoveling snow on Saturday afternoon. How
         much total time (in minutes) did she spend shoveling snow?
         */
+		int hiltMinutesShovelingSaturdayMorning = 90;
+		int hiltMinutesShovelingSaturdayAfternoon = 45;
+		int totalMinutesShoveling = hiltMinutesShovelingSaturdayAfternoon + hiltMinutesShovelingSaturdayMorning;
 
 
         /* Exercise 26
         26. Mrs. Hilt bought 6 hot dogs. Each hot dog cost 50 cents. How much
         money did she pay for all of the hot dogs?
         */
+		double hiltsHotdogPurchase = 6;
+		double costOfHotdog = .50;
+		double totalCostOfHotdogs = costOfHotdog*hiltsHotdogPurchase;
 
 
         /* Exercise 27
         27. Mrs. Hilt has 50 cents. A pencil costs 7 cents. How many pencils can
         she buy with the money she has?
         */
+		int hiltHas = 50;
+		int pencilCost = 07;
+		int pencilsBuyable = hiltHas/pencilCost;
 
 
         /* Exercise 28
@@ -181,72 +257,108 @@ public class Exercises {
         were orange. If 20 of the butterflies were orange, how many of them
         were red?
         */
+		int totalButterflies = 33;
+		int orangeButterflies = 20;
+		int probablyRedButterflies = totalButterflies - orangeButterflies;
 
 
         /* Exercise 29
         29. Kate gave the clerk $1.00. Her candy cost 54 cents. How much change
         should Kate get back?
         */
+		double katiesCash = 1.00;
+		double katiesCost = .54;
+		double katiesChange = katiesCash - katiesCost;
 
 
         /* Exercise 30
         30. Mark has 13 trees in his backyard. If he plants 12 more, how many trees
         will he have?
         */
+		int marksTrees = 13;
+		int moreTrees = 12;
+		int totalTrees = marksTrees + moreTrees;
 
 
         /* Exercise 31
         31. Joy will see her grandma in two days. How many hours until she sees
         her?
         */
+		int daysUntilJoySeesGrandma = 2;
+		int numberOfHoursInADay = 24;
+		int remainingHours= daysUntilJoySeesGrandma*numberOfHoursInADay;
 
 
         /* Exercise 32
         32. Kim has 4 cousins. She wants to give each one 5 pieces of gum. How
         much gum will she need?
         */
+		int kimsCousins = 4;
+		int gumDispersionPer = 5;
+		int gumNeeded = kimsCousins*gumDispersionPer;
 
 
         /* Exercise 33
         33. Dan has $3.00. He bought a candy bar for $1.00. How much money is
         left?
         */
+		double dansCash = 3.00;
+		double dansCandyPurchase = 1;
+		double dansRemainder = dansCash-dansCandyPurchase;
 
 
         /* Exercise 34
         34. 5 boats are in the lake. Each boat has 3 people. How many people are
         on boats in the lake?
         */
+		int boatsInLake = 5;
+		int peoplePerBoat = 3;
+		int peopleOnTheLake = boatsInLake*peoplePerBoat;
 
 
         /* Exercise 35
         35. Ellen had 380 legos, but she lost 57 of them. How many legos does she
         have now?
         */
+		int ellensLegos = 380;
+		int lostLegos = 57;
+		int remainingLegos = ellensLegos-lostLegos;
 
 
         /* Exercise 36
         36. Arthur baked 35 muffins. How many more muffins does Arthur have to
         bake to have 83 muffins?
         */
+		int arthurBaked = 35;
+		int arthurNeeds =83;
+		int arthurNeedsToBake = arthurNeeds - arthurBaked;
 
 
         /* Exercise 37
         37. Willy has 1400 crayons. Lucy has 290 crayons. How many more
         crayons does Willy have then Lucy?
         */
+		int allWillyCrayons = 1400;
+		int allLucysCrayons =290;
+		int crayonSupremecyByHowMany = allWillyCrayons-allLucysCrayons;
 
 
         /* Exercise 38
         38. There are 10 stickers on a page. If you have 22 pages of stickers, how
         many stickers do you have?
         */
+		int stickersPerPage = 10;
+		int numberOfPages = 22;
+		int totalStickers = stickersPerPage*numberOfPages;
 
 
         /* Exercise 39
         39. There are 100 cupcakes for 8 children to share. How much will each
         person get if they share the cupcakes equally?
         */
+		double totalCupcakes = 100;
+		double totalKids = 8;
+		double shareYourCupcakes = totalCupcakes/totalKids;
 
 
         /* Exercise 40
@@ -254,6 +366,9 @@ public class Exercises {
         tiny glass jars. If each jar is to contain six cookies, how many
         cookies will not be placed in a jar?
         */
+		int sheMade = 47;
+		int sixPerJar = 6;
+		int dontFit = 5;
 
 
         /* Exercise 41
