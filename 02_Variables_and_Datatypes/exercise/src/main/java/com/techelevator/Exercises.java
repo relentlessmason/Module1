@@ -368,7 +368,8 @@ public class Exercises {
         */
 		int sheMade = 47;
 		int sixPerJar = 6;
-		int dontFit = 5;
+		int packItUp = sheMade % sixPerJar;
+
 
 
         /* Exercise 41
@@ -376,6 +377,9 @@ public class Exercises {
         neighbors. If each neighbor received an equal number of croissants,
         how many will be left with Marian?
         */
+		int croissantsPrepared = 59;
+		int numberOfNeighbors = 8;
+		int croissantsForMarian = croissantsPrepared % numberOfNeighbors;
 
 
         /* Exercise 42
@@ -383,6 +387,9 @@ public class Exercises {
         place 12 cookies on a tray at a time, how many trays will she need to
         prepare 276 oatmeal cookies at a time?
         */
+		int oatmealCookieTray = 12;
+		int desiredQuantityOfCookies = 276;
+		int numberOfTrays = desiredQuantityOfCookies/oatmealCookieTray;
 
 
         /* Exercise 43
@@ -390,6 +397,9 @@ public class Exercises {
         bite-sized pretzels. If one serving is equal to 12 pretzels, how many
         servings of bite-sized pretzels was Marian able to prepare?
         */
+		int marianMadePretzels = 480;
+		int onePortion = 12;
+		int numberOfPretzelServings = marianMadePretzels/onePortion;
 
 
         /* Exercise 44
@@ -397,6 +407,10 @@ public class Exercises {
         orphanage. If two lemon cupcakes were left at home, how many
         boxes with 3 lemon cupcakes each were given away?
         */
+		int mariansLemonCupcakes = 53;
+		int leftAtHome = 2;
+		int dispensedCupcakes = mariansLemonCupcakes-leftAtHome;
+		int tripleBoxesHandedOut = dispensedCupcakes/3;
 
 
         /* Exercise 45
@@ -404,6 +418,8 @@ public class Exercises {
         were served equally to 12 people, how many carrot sticks were left
         uneaten?
         */
+		int preparedCarrotSticks = 74;
+		int carrotStickDispertion = preparedCarrotSticks % 12;
 
 
         /* Exercise 46
@@ -411,6 +427,9 @@ public class Exercises {
         them on the shelves in their bedroom. If every shelf can carry a
         maximum of 7 teddy bears, how many shelves will be filled?
         */
+		int sisterlyCollection = 98;
+		int shelfMax = 7;
+		int filledShelves = sisterlyCollection/shelfMax;
 
 
         /* Exercise 47
@@ -418,6 +437,9 @@ public class Exercises {
         them in an album. If an album can contain 20 pictures, how many
         albums will she need if there are 480 pictures?
         */
+		int totalPictures = 480;
+		int albumCapacity = 20;
+		int howManyAlbums = totalPictures/albumCapacity;
 
 
         /* Exercise 48
@@ -426,6 +448,10 @@ public class Exercises {
         cards, how many boxes were filled and how many cards are there in
         the unfilled box?
         */
+		int totalTradingCards = 94;
+		int boxLoad = 8;
+		int boxesFilled = totalTradingCards/boxLoad;
+		int remainingCards = totalTradingCards % boxLoad;
 
 
         /* Exercise 49
@@ -433,12 +459,18 @@ public class Exercises {
         210 books to be distributed equally on the 10 shelves he repaired,
         how many books will each shelf contain?
         */
+		int booksOwned = 210;
+		int numberOfShelves = 10;
+		int bookesPerShelf = booksOwned/numberOfShelves;
 
 
         /* Exercise 50
         50. Cristina baked 17 croissants. If she planned to serve this equally to
         her seven guests, how many will each have?
         */
+		double christinasCroissants = 17;
+		double christinasGuests = 7;
+		double evenDispersion = christinasCroissants / christinasGuests;
 
 
 	    /* Exercise 51
@@ -446,6 +478,10 @@ public class Exercises {
 	    1.90 hours. How long will it take the two painters working together to paint 5 12 x 14 rooms?
 	    Hint: Calculate the hourly rate for each painter, combine them, and then divide the total walls in feet by the combined hourly rate of the painters.
 	    */
+		double billAvg = 1/2.15;
+		double jillAvg = 1/1.9;
+		double togetherAvg = (billAvg+jillAvg);
+		double fiveRooms = 5/togetherAvg;
 
 
 	    /* Exercise 52
@@ -455,12 +491,20 @@ public class Exercises {
 		with a period. Use "Grace", "Hopper, and "B" for the first name, last name, and middle initial.
 		Example: "John", "Smith, "D" —> "Smith, John D."
 	    */
+		String firstName = "Grace ";
+		String middleInt = "B.";
+		String lastName = "Hopper, ";
+		String wholeName = lastName + firstName + middleInt;
+
 
 
 	    /* Exercise 53
 	    53. The distance between New York and Chicago is 800 miles, and the train has already travelled 537 miles.
 	    What percentage of the trip as a whole number has been completed?
 	    */
+		int totalDistanceNYChi = 800;
+		int trainTravelled = 537;
+		int percentageComplete = (trainTravelled/totalDistanceNYChi)*100;
 
 	}
 
