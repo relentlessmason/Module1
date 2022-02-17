@@ -641,7 +641,22 @@ return false;
 	 luckySum(13, 13, 3) → 0
 	 */
 	public int luckySum(int a, int b, int c) {
-		return 0;
+		if (a==13 && b==13){
+			return 0;
+		}
+		if (a==13&&b==13&&c==13){
+			return 0;
+		}
+		if (a== 13){
+			return c;
+		}
+		if (b==13){
+			return a;
+		}
+		if (c==13){
+			return (a+b);
+		}
+		return (a+b+c);
 	}
 
 }
