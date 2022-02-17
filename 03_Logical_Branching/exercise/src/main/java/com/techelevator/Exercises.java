@@ -412,6 +412,12 @@ return false;
 	 specialEleven(24) → false
 	 */
 	public boolean specialEleven(int n) {
+		if (n % 11 == 0){
+			return true;
+		}
+		if (n % 11 == 1){
+			return true;
+		}
 		return false;
 	}
 
@@ -423,6 +429,12 @@ return false;
 	 more20(22) → true
 	 */
 	public boolean more20(int n) {
+		if (n>0 && n % 20 == 1){
+			return true;
+		}
+		if (n>0 && n % 20 == 2){
+			return true;
+		}
 		return false;
 	}
 
@@ -434,6 +446,11 @@ return false;
 	 old35(15) → false
 	 */
 	public boolean old35(int n) {
+		if (n>0){
+			if (n % 3 == 0 ^ n % 5 ==0){
+				return true;
+			}
+		}
 		return false;
 	}
 
@@ -446,6 +463,9 @@ return false;
 	 less20(20) → false
 	 */
 	public boolean less20(int n) {
+		if (n % 20 == 18 || n % 20 == 19){
+			return true;
+			}
 		return false;
 	}
 
@@ -457,6 +477,11 @@ return false;
 	 nearTen(19) → true
 	 */
 	public boolean nearTen(int num) {
+		if (num >0){
+			if (num % 10 == 9 || num % 10 == 8 || num % 10 == 0 || num % 10 == 2 || num % 10 == 1){
+				return true;
+			}
+		}
 		return false;
 	}
 
