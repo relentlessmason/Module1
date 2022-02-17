@@ -493,7 +493,15 @@ return false;
 	 teenSum(13, 2) → 19
 	 */
 	public int teenSum(int a, int b) {
-		return 0;
+		if ((a >= 13 && a <= 19)){
+			return (19);}
+		if ((b >= 13 && b <= 19)){
+			return (19);}
+		if ((b >= 13 && b <= 19) && (a >= 13 && a <= 19)){
+			return 38;
+		}
+		else {
+			return (a+b);}
 	}
 
 	/*
@@ -504,7 +512,16 @@ return false;
 	 answerCell(true, false, false) → false
 	 */
 	public boolean answerCell(boolean isMorning, boolean isMom, boolean isAsleep) {
-		return false;
+		if (isAsleep){
+			return false;
+		}
+		if (isMorning){
+			if (isMom){
+				return true;
+			}
+			return false;
+		}
+		return true;
 	}
 
 	/*
@@ -517,6 +534,15 @@ return false;
 	 teaParty(20, 6) → 2
 	 */
 	public int teaParty(int tea, int candy) {
+		if (tea < 5 || candy < 5){
+			return 0;
+		}
+		if ((tea >= (2*candy)) || (candy >= (2*tea)) ){
+			return 2;
+		}
+		if (tea >= 5 && candy >= 5){
+			return 1;
+		}
 		return 0;
 	}
 
@@ -527,6 +553,15 @@ return false;
 	 twoAsOne(3, 2, 2) → false
 	 */
 	public boolean twoAsOne(int a, int b, int c) {
+		if (a+b==c){
+			return true;
+		}
+		if (b+c==a){
+			return true;
+		}
+		if (a+c==b){
+			return true;
+		}
 		return false;
 	}
 
@@ -538,6 +573,13 @@ return false;
 	 inOrder(1, 1, 2, true) → true
 	 */
 	public boolean inOrder(int a, int b, int c, boolean bOk) {
+		if (bOk){
+			if (c>b){
+				return true;
+			}
+		}
+		if (b>a && c>b){
+		return true;}
 		return false;
 	}
 
@@ -550,6 +592,18 @@ return false;
 	 inOrderEqual(5, 5, 7, true) → true
 	 */
 	public boolean inOrderEqual(int a, int b, int c, boolean equalOk) {
+		if (a<b && b<c){
+			if ((a==b || b==c)) {
+				return false;
+			}
+			return true;
+		}
+		if (equalOk){
+			if (a<=b && b<=c){
+			if (a==b || b==c || a==c){
+				return true;
+			}
+		}}
 		return false;
 	}
 
@@ -561,7 +615,19 @@ return false;
 	 loneSum(3, 3, 3) → 0
 	 */
 	public int loneSum(int a, int b, int c) {
-		return 0;
+		if (a==c && a==b){
+			return 0;
+		}
+		if (a==b){
+			return (c);
+		}
+		if (b==c){
+			return (a);
+		}
+		if (a==c){
+			return (b);
+		}
+		return (a+b+c);
 	}
 
 	/*
