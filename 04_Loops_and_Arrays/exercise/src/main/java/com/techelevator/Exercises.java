@@ -130,7 +130,8 @@ public class Exercises {
 	 middleWay([5, 2, 9], [1, 4, 5]) → [2, 4]
 	 */
 	public int[] middleWay(int[] a, int[] b) {
-		return new int[] {};
+		int[] middles = {a[1],b[1]};
+		return middles;
 	}
 
 	/*
@@ -141,7 +142,12 @@ public class Exercises {
 	 countEvens([1, 3, 5]) → 0
 	 */
 	public int countEvens(int[] nums) {
-		return 0;
+		int evens = 0;
+		for (int i=0; i < nums.length; i++){
+			if (nums[i] % 2 == 0)
+				evens++;
+		}
+			return evens;
 	}
 
 	/*
@@ -155,7 +161,15 @@ public class Exercises {
 	 sum13([1, 2, 2, 1, 13, 3, 4]) → 10
 	 */
 	public int sum13(int[] nums) {
-		return 0;
+		int sum = 0;
+		for (int i=0; i < nums.length; i++){
+			if (nums.length>0) {
+
+				if (nums[i] < 13 || nums[i] > 13) sum += nums[i];
+				else i++;
+			}
+		}
+		return sum;
 	}
 
 	/*
@@ -165,8 +179,16 @@ public class Exercises {
 	 has22([2, 1, 2]) → false
 	 */
 	public boolean has22(int[] nums) {
-		return false;
-	}
+		for (int i=0; i< nums.length; i++) {
+			if (nums[i] == 2 && i > 0 && nums[i - 1] == 2) {
+				return true;
+			}
+			if (nums[i] == 2 && i > nums.length-1 && nums[i + 1] == 2) {
+				return true;
+			}
+		}
+			return false;
+		}
 	
 	/*
 	 14. Given an array of ints, return true if the array contains no 1's and no 3's.
@@ -175,7 +197,10 @@ public class Exercises {
 	 lucky13([1, 2, 4]) → false
 	 */
 	public boolean lucky13(int[] nums) {
-		return false;
+		for (int i=0; i < nums.length; i++)
+			if (nums[i] == 1 || nums[i] == 3)
+				return false;
+			return true;
 	}
 
 	/*
