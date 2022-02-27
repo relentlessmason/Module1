@@ -132,7 +132,8 @@ public class Exercises {
 	 left2("Hi") → "Hi"
 	 */
 	public String left2(String str) {
-		return null;
+		String firstTwo = str.substring(0,2);
+		return new String(str.substring(2)+firstTwo);
 	}
 
 	/*
@@ -143,7 +144,8 @@ public class Exercises {
 	 right2("Hi") → "Hi"
 	 */
 	public String right2(String str) {
-		return null;
+		String lastTwo= str.substring(str.length()-2);
+		return new String(lastTwo+str.substring(0,str.length()-2));
 	}
 
 	/*
@@ -154,7 +156,10 @@ public class Exercises {
 	 theEnd("oh", true) → "o"
 	 */
 	public String theEnd(String str, boolean front) {
-		return null;
+		if(front){
+			return new String(str.substring(0,1));
+		}
+		return new String(str.substring(str.length()-1));
 	}
 
 	/*
@@ -165,7 +170,10 @@ public class Exercises {
 	 withoutEnd2("ab") → ""
 	 */
 	public String withoutEnd2(String str) {
-		return null;
+		if (str.length()<=1){
+			return new String("");
+		}
+		return new String(str.substring(1,str.length()-1));
 	}
 
 	/*
@@ -176,6 +184,10 @@ public class Exercises {
 	 middleTwo("Practice") → "ct"
 	 */
 	public String middleTwo(String str) {
+		if (str.length() %2 ==0){
+			int findMiddle = str.length()/2;
+			return new String(str.substring(findMiddle-1, findMiddle+1));
+		}
 		return null;
 	}
 
@@ -186,6 +198,12 @@ public class Exercises {
 	 endsLy("oddy") → false
 	 */
 	public boolean endsLy(String str) {
+		if (str.length()<2){
+			return false;
+		}
+		if (str.substring((str.length() - 2)).equals("ly")){
+	return true;
+		}
 		return false;
 	}
 
@@ -209,7 +227,10 @@ public class Exercises {
 	 twoChar("java", 3) → "ja"
 	 */
 	public String twoChar(String str, int index) {
-		return null;
+		if (index <= str.length()-2 && index >=0){
+		return new String( str.substring(index, index+2));
+		}
+		return new String(str.substring(0,2));
 	}
 
 	/*
@@ -220,7 +241,8 @@ public class Exercises {
 	 middleThree("solving") → "lvi"
 	 */
 	public String middleThree(String str) {
-		return null;
+			int findMiddle = str.length()/2;
+			return new String(str.substring(findMiddle-1, findMiddle+2));
 	}
 
 	/*
@@ -232,7 +254,22 @@ public class Exercises {
 	 hasBad("xxbadxx") → false
 	 */
 	public boolean hasBad(String str) {
-		return false;
+		if (str.length()<3){
+			return false;
+		}
+
+			if (str.length() == 3 && str.equals("bad")) {
+				return true;
+			}
+			if (str.length() > 4) {
+				if (str.substring(0, 3).equals("bad")) {
+					return true;
+				}
+			}
+				if (str.substring(1, 4).equals("bad")) {
+					return true;
+			}
+			return false;
 	}
 
 	/*
