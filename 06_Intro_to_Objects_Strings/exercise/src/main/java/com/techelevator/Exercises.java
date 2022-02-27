@@ -9,7 +9,7 @@ public class Exercises {
 	 helloName("X") → "Hello X!"
 	 */
 	public String helloName(String name) {
-		return null;
+		return new String("Hello " + name + "!");
 	}
 
 	/*
@@ -20,7 +20,7 @@ public class Exercises {
 	 makeAbba("What", "Up") → "WhatUpUpWhat"
 	 */
 	public String makeAbba(String a, String b) {
-		return null;
+		return new String(a+b+b+a);
 	}
 
 	/*
@@ -32,7 +32,7 @@ public class Exercises {
 	 makeTags("cite", "Yay") → "<cite>Yay</cite>"
 	 */
 	public String makeTags(String tag, String word) {
-		return null;
+		return new String("<"+tag + ">" + word + "</"+tag+">");
 	}
 
 	/*
@@ -44,7 +44,7 @@ public class Exercises {
 	 makeOutWord("[[]]", "word") → "[[word]]"
 	 */
 	public String makeOutWord(String out, String word) {
-		return null;
+		return new String(out.substring(0,2)+ word + out.substring(2));
 	}
 
 	/*
@@ -55,7 +55,7 @@ public class Exercises {
 	 extraEnd("Hi") → "HiHiHi"
 	 */
 	public String extraEnd(String str) {
-		return null;
+		return new String(str.substring(str.length()-2) + str.substring(str.length()-2) + str.substring(str.length()-2));
 	}
 
 	/*
@@ -67,7 +67,10 @@ public class Exercises {
 	 firstTwo("ab") → "ab"
 	 */
 	public String firstTwo(String str) {
-		return null;
+		if(str.length() <= 1){
+			return str;
+		}
+		return new String(str.substring(0,2));
 	}
 
 	/*
@@ -77,6 +80,9 @@ public class Exercises {
 	 firstHalf("abcdef") → "abc"
 	 */
 	public String firstHalf(String str) {
+		if(str.length() % 2 == 0){
+			return new String(str.substring(0,str.length()/2));
+		}
 		return null;
 	}
 
@@ -88,7 +94,7 @@ public class Exercises {
 	 withoutEnd("coding") → "odin"
 	 */
 	public String withoutEnd(String str) {
-		return null;
+		return new String(str.substring(1, str.length()-1));
 	}
 
 	/*
@@ -100,6 +106,10 @@ public class Exercises {
 	 comboString("aaa", "b") → "baaab"
 	 */
 	public String comboString(String a, String b) {
+		if (a.length()>b.length()){
+		return new String(b+a+b);}
+		if (a.length()<b.length()){
+			return new String(a+b+a);}
 		return null;
 	}
 
@@ -111,7 +121,7 @@ public class Exercises {
 	 nonStart("shotl", "java") → "hotlava"
 	 */
 	public String nonStart(String a, String b) {
-		return null;
+		return new String(a.substring(1)+b.substring(1));
 	}
 
 	/*
