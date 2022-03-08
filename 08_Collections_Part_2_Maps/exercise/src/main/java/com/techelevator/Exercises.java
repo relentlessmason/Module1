@@ -1,5 +1,6 @@
 package com.techelevator;
 
+import java.nio.MappedByteBuffer;
 import java.security.Key;
 import java.util.HashMap;
 import java.util.Map;
@@ -239,7 +240,16 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Boolean> wordMultiple(String[] words) {
-		return null;
+		Map <String, Boolean> ifTrueSignHere = new HashMap<>();
+		for (String word :words){
+			if (ifTrueSignHere.containsKey(word)){
+				ifTrueSignHere.put(word, true);
+			}
+			else {
+				ifTrueSignHere.put(word, false);
+			}
+		}
+		return ifTrueSignHere;
 	}
 
 	/*
@@ -254,7 +264,9 @@ public class Exercises {
 	 */
 	public Map<String, Integer> consolidateInventory(Map<String, Integer> mainWarehouse,
 			Map<String, Integer> remoteWarehouse) {
-		return null;
+		mainWarehouse.forEach((key, value) -> remoteWarehouse.merge(key, value, Integer::sum));
+
+		return remoteWarehouse; //kory helped with this one
 	}
 
 	/*
@@ -273,7 +285,23 @@ public class Exercises {
 	 *
 	 */
 	public Map<String, Integer> last2Revisited(String[] words) {
-		return null;
-	}
+		Map<String, Integer> dosEquis = new HashMap<>();
 
+		for (String fluxx : words){
+
+			dosEquis.put(fluxx, 0);
+
+			for (int i=0; i< fluxx.length(); i++){
+
+				String lastTwo = fluxx.substring(fluxx.length() - 2);
+
+					if (fluxx.substring(i).startsWith(lastTwo)){
+					dosEquis.put(fluxx, dosEquis.get(fluxx)+1);
+			}
+
+			}
+			dosEquis.put(fluxx, dosEquis.get(fluxx)-1);
+			}
+		return dosEquis;
+	}
 }
