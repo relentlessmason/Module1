@@ -1,10 +1,9 @@
 package com.techelevator;
 
 public class Television {
-    private boolean isOn;
-    private int currentChannel;
-    private int currentVolume;
-    private boolean isNew;
+    public boolean isOn;
+    private int currentChannel = 3;
+    private int currentVolume = 2;
 
     public int getCurrentChannel() {
         return currentChannel;
@@ -12,29 +11,35 @@ public class Television {
     public int getCurrentVolume() {
         return currentVolume;
     }
-    public boolean getisOn(){
-        return isOn;
+    private boolean getisOn() {
+        if (isOn) {
+            return true;
+        }
+        return false;
     }
-    public Television(){
-        if (isNew) {
-            isOn = false;
-            currentChannel = 3;
-            currentVolume=2;
+
+    public boolean isOn(){
+        if (isOn) {
+            return true;
+        }
+        return false;
+    }
+    public void turnOff(){
+        if (this.isOn){
+            this.isOn = false;
         }
     }
-    public void turnOff(boolean isOn){
-        this.isOn = false;
-    }
-    public void turnOn(boolean isOn){
-        this.isOn = true;
-        this.currentVolume = 2;
-        this.currentChannel = 3;
+    public void turnOn(){
+        if (!this.isOn) {
+            this.isOn = true;
+            this.currentVolume = 2;
+            this.currentChannel = 3;
+        }
     }
     public void changeChannel(int newChannel){
-        if (isOn) {
+        if (this.isOn) {
             if (newChannel >= 3 && newChannel <= 18){
-                this.currentChannel = newChannel;
-            }
+                this.currentChannel = newChannel;}
         }
     }
     public void channelUp(){
@@ -54,9 +59,18 @@ public class Television {
         }
     }
     public void raiseVolume(){
+        if(isOn){
         this.currentVolume = currentVolume + 1;
+        if(currentVolume>10){
+        currentVolume=10;
+        }
+        }
     }
     public void lowerVolume(){
+        if(isOn){
         this.currentVolume = currentVolume - 1;
+        if(currentVolume <0){
+        currentVolume=0;}
+        }
     }
 }
