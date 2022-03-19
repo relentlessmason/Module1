@@ -23,7 +23,7 @@ private boolean doorOpen;
         this.numberOfFloors=numberOfLevels;
     }
 
-    public void openDoor(){
+    public void openDoor410(){
         if (!doorOpen){
             doorOpen=true;
         }
