@@ -10,38 +10,28 @@ private String letterGrade;
 public int getPossibleMarks(){
     return possibleMarks;
     }
-    public String getSubmitterName(){
+public String getSubmitterName(){
     return submitterName;
 }
 public int getEarnedMarks() {
     return earnedMarks;
     }
-    public void setEarnedMarks(int earnedMarks) {
+public void setEarnedMarks(int earnedMarks) {
     this.earnedMarks = earnedMarks;
     }
 
-    public String getLetterGrade(){
+public String getLetterGrade(){
 
-    double theGrade = (double) earnedMarks/possibleMarks;
+double theGrade = (double) earnedMarks/possibleMarks;
 
-if (theGrade >= .90){
-        letterGrade = "A";
-        }
-if (theGrade<.90 && theGrade >= .80){
-        letterGrade = "B";
-       }
-if (theGrade<.80 && theGrade >= .70){
-        letterGrade = "C";
-       }
-if (theGrade<.70 && theGrade >= .60){
-        letterGrade = "D";
-       }
-if (theGrade<.60){
-        letterGrade = "F";
-      }
+if (theGrade >= .90){ letterGrade = "A";}
+else if (theGrade >= .80){ letterGrade = "B";}
+else if (theGrade >= .70){ letterGrade = "C";}
+else if (theGrade >= .60){ letterGrade = "D";}
+else if (theGrade < .60){letterGrade = "F";}
 
-        return letterGrade;
-    }
+return letterGrade;
+}
 
 public HomeworkAssignment(int possibleMarks, String submitterName){
     this.possibleMarks = possibleMarks;
