@@ -6,6 +6,99 @@ import java.util.Map;
 import java.util.Scanner;
 import java.util.TreeMap;
 
+
+// YOUR CODE IS HERE
+abstract class Wall {
+    private String name = "";
+    private String color = "";
+
+    public String getName() {
+        return name;
+    }
+    public String getColor() {
+        return color;
+    }
+
+    public Wall(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+    public abstract int getArea();
+} //// Wall ends here
+
+class RectangleWall extends Wall {
+
+    private int length = 0;
+    private int height = 0;
+    public int getLength() {
+        return length;
+    }
+    public int getHeight() {
+        return height;
+    }
+
+    public RectangleWall(String name, String color) {
+        super(name, color);
+    }
+    public RectangleWall(String name, String color, int length, int height) {
+        super(name, color);
+        this.length = length;
+        this.height = height;
+    }
+
+    @Override
+    public int getArea() {
+        return getLength() * getHeight();
+    }
+    public String toString() {
+        return getName() + " (" + getLength() + "x" + getHeight() + ") rectangle";
+    }
+}
+// Rectangle ends here
+
+class SquareWall extends RectangleWall {
+    private int sideLength = 0;
+    public int getSideLength() {
+        return sideLength;
+    }
+
+    public SquareWall(String name, String color, int sideLength) {
+        super(name, color);
+        this.sideLength = sideLength;
+    }
+    public int getArea() {
+        return getSideLength()*getSideLength();
+    }
+    public String toString() {
+        return getName() + " (" + getSideLength() + "x" + getSideLength() + ") square";
+    }
+}
+// Square ends here
+
+class TriangleWall extends Wall {
+private int base = 0;
+private int height = 0;
+    public int getBase() {
+        return base;
+    }
+    public int getHeight() {
+        return height;
+    }
+
+    public TriangleWall(String name, String color, int base, int height) {
+        super(name, color);
+        this.base = base;
+        this.height = height;
+    }
+
+    @Override
+    public int getArea() {
+        return (getBase()*getHeight())/2;
+    }
+    public String toString() {
+        return getName() + " (" + getBase() + "x" + getHeight() + ") triangle";
+    }
+}
 class PaintCalculator {
 
     private static Scanner userInput = new Scanner(System.in);
@@ -13,7 +106,7 @@ class PaintCalculator {
     public static void main(String[] args) {
 
         // Step One:
-        //List<Wall> walls = new ArrayList<Wall>();
+        List<Wall> walls = new ArrayList<Wall>();
 
         while (true) {
             System.out.println("[1] Add a wall");
@@ -25,7 +118,7 @@ class PaintCalculator {
 
             if (userChoice.equals("1")) {
                 // Step One:
-                // Wall newWall = null;
+                Wall newWall = null;
 
                 System.out.println("What's the name of the new wall?");
                 String name = userInput.nextLine();
@@ -46,13 +139,13 @@ class PaintCalculator {
                     int length = Integer.parseInt(userInput.nextLine());
 
                     // Step Two:
-                    //newWall = new RectangleWall(name, color, height, length);
+                    newWall = new RectangleWall(name, color, height, length);
                 } else if (shapeChoice.equals("2")) {
                     System.out.println("Enter wall side length >>> ");
                     int sideLength = Integer.parseInt(userInput.nextLine());
 
                     // Step Three:
-                    //newWall = new SquareWall(name, color, sideLength);
+                    newWall = new SquareWall(name, color, sideLength);
                 } else if (shapeChoice.equals("3")) {
                     System.out.println("Enter wall height >>> ");
                     int height = Integer.parseInt(userInput.nextLine());
